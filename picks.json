@@ -1,0 +1,26 @@
+[
+  {
+    "local": "Real Potosí",
+    "visita": "Bulo Bulo",
+    "hora": "17:00",
+    "mercado": "Over 2.5 goles",
+    "valorEsperado": "+15%",
+    "bloqueado": false
+  },
+  {
+    "local": "The Strongest",
+    "visita": "Oriente Petrolero",
+    "hora": "19:00",
+    "mercado": "Local o Empate",
+    "valorEsperado": "+12%",
+    "bloqueado": false
+  },
+  {
+    "local": "Libertad",
+    "visita": "Técnico U.",
+    "hora": "12:00",
+    "mercado": "Ambos Anotan",
+    "valorEsperado": null,
+    "bloqueado": true
+  }
+]
