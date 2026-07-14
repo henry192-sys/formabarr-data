@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap');
+
+:root {
+  --bg: #0F0F0F;
+  --bg-card: #1A1A1A;
+  --border: #2A2A2A;
+  --text: #F5F5F5;
+  --text-muted: #9A9A9A;
+  --accent3: #F1D849;
+  --accent-mid1: #E79B3C;
+  --accent: #EC7638;
+  --accent2: #D8422E;
+  --accent-grad: linear-gradient(135deg, #F1D849 0%, #E79B3C 35%, #EC7638 65%, #D8422E 100%);
+  --positive: #3DDC84;
+  --positive-vivid: #12E88A;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', -apple-system, 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  width: 100%;
+  max-width: 440px;
+  min-height: 100vh;
+}
+
+/* En pantallas más anchas que un celular, mostrar la página como una
+   tarjeta centrada tipo "app" en vez de una franja pegada a la izquierda. */
+@media (min-width: 480px) {
+  body {
+    background: #050505;
+    padding: 40px 16px;
+    align-items: flex-start;
+  }
+  .page {
+    min-height: auto;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 20px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo { width: 36px; height: 36px; }
+
+.brand h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.tagline {
+  margin: 2px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.date-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 14px 20px 0;
+}
+
+.date-arrow {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.date-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.date-label {
+  min-width: 70px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent3);
+}
+
+.picks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 20px;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.pick-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  overflow: hidden;
+}
+
+.pick-teams {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.pick-meta {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.pick-footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pick-market {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ve-badge {
+  font-size: 12px;
+  font-weight: 800;
+  color: #0F0F0F;
+  background: var(--positive-vivid);
+  padding: 3px 9px;
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px rgba(18, 232, 138, 0.4), 0 1px 5px rgba(18, 232, 138, 0.45);
+  white-space: nowrap;
+}
+
+.locked-summary {
+  background: var(--bg-card);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.locked-summary-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent3);
+}
+
+.premium-panel {
+  padding: 4px 20px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.license-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+#license-input {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 0;
+}
+
+#license-input::placeholder { color: var(--text-muted); }
+
+#activate-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--accent);
+  color: var(--accent3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.license-msg {
+  min-height: 16px;
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.license-msg.ok { color: var(--positive); }
+.license-msg.error { color: var(--accent2); }
+
+.unlock-btn {
+  width: 100%;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  padding: 13px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0F0F0F;
+  background: var(--accent-grad);
+  cursor: pointer;
+}
+
+.hint {
+  margin: 8px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.hint a { color: var(--accent3); text-decoration: none; }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 20px 20px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.footer-link.small {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.premium-active-banner {
+  margin: 14px 20px 0;
+  padding: 9px 10px;
+  border-radius: 8px;
+  background: rgba(61, 220, 132, 0.12);
+  border: 1px solid var(--positive);
+  color: var(--positive);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}

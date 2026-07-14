@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FormaBarr — Pronósticos</title>
+<link rel="icon" href="icons/icon48.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <img src="icons/icon48.png" alt="" class="logo">
+      <div class="brand">
+        <h1>FormaBarr</h1>
+        <p class="tagline">Modelo HenryBarr — Valor Esperado Positivo</p>
+      </div>
+    </header>
+
+    <div id="premium-banner" class="premium-active-banner" hidden>Premium activo — pronósticos ilimitados</div>
+
+    <div id="date-nav" class="date-nav">
+      <button id="date-prev" class="date-arrow" aria-label="Día anterior">‹</button>
+      <span id="date-label" class="date-label">Hoy</span>
+      <button id="date-next" class="date-arrow" aria-label="Día siguiente">›</button>
+    </div>
+
+    <main id="picks" class="picks"></main>
+
+    <section class="premium-panel">
+      <div class="license-row">
+        <input type="text" id="license-input" placeholder="Código de licencia" autocomplete="off">
+        <button id="activate-btn">Activar</button>
+      </div>
+      <p id="license-msg" class="license-msg" role="status"></p>
+
+      <button id="unlock-btn" class="unlock-btn">Desbloquear ilimitado</button>
+      <p class="hint">¿No tienes código? <a id="no-code-link" href="#" target="_blank" rel="noopener">Escríbenos</a></p>
+    </section>
+
+    <footer class="footer">
+      <a href="https://sites.google.com/view/formabarr-privacidad/inicio" target="_blank" rel="noopener" class="footer-link small">Política de privacidad</a>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
