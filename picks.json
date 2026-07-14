@@ -1,25 +1,28 @@
 [
   {
-    "local": "Real Potosí",
-    "visita": "Bulo Bulo",
-    "hora": "17:00",
-    "mercado": "Over 2.5 goles",
-    "valorEsperado": "+15%",
+    "fecha": "2026-07-14",
+    "local": "Iberia 1999",
+    "visita": "Flora",
+    "hora": "11:00",
+    "mercado": "Ambos anotan (AA)",
+    "valorEsperado": "+10%",
     "bloqueado": false
   },
   {
-    "local": "The Strongest",
-    "visita": "Oriente Petrolero",
-    "hora": "19:00",
-    "mercado": "Local o Empate",
-    "valorEsperado": "+12%",
+    "fecha": "2026-07-14",
+    "local": "KuPS",
+    "visita": "Vardar",
+    "hora": "10:00",
+    "mercado": "Ambos anotan (AA)",
+    "valorEsperado": "+9.1%",
     "bloqueado": false
   },
   {
-    "local": "Libertad",
-    "visita": "Técnico U.",
-    "hora": "12:00",
-    "mercado": "Ambos Anotan",
+    "fecha": "2026-07-14",
+    "local": "Inter Escaldes",
+    "visita": "Lincoln",
+    "hora": "11:00",
+    "mercado": "Menos de 3.5 goles",
     "valorEsperado": null,
     "bloqueado": true
   }
